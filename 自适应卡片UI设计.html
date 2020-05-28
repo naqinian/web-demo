@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Poppins',sans-serif;
+      background: #070c24;
+    }
+    .container{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 900px;
+      height: 600px;
+      background: #fff;
+      margin: 20px;
+    }
+    .container .imgbox{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      background: #006dbc;
+    }
+    .container .imgbox::before{
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #000;
+      opacity: .2;
+      font-size: 8em; 
+    }
+    .container .imgbox img{
+      position: relative;
+      width: 200px;
+      transform: rotate(-30deg);
+      /* left: -50px; */
+    }
+    .container .details{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 40px;
+    }
+    .container .details .content{
+      width: 100%;
+    }
+    .container .details .content h2{
+      margin: 0;
+      padding: 0;
+      font-size: 2.5em;
+      line-height: 0.8em;
+    }
+    .container .details .content p{
+      max-width: 85%;
+      margin-left: 15%;
+      color: #333;
+      font-size: 15px;
+    }
+    .container .details .content h3{
+      margin: 0;
+      padding: 0;
+      font-size: 2.5em;
+      color: #a2a2a2;
+      float: left;
+    }
+    .container .details .content button{
+      background: #006dbc;
+      color: #fff;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      padding: 15px 20px;
+      margin-top: 10px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 40px;
+      float: right;
+      cursor: pointer;
+    }
+
+    @media(max-width:1000px){
+      .container{
+        height: auto;
+      }
+      .container .imgbox{
+        padding: 40px;
+        box-sizing: border-box;
+        width: 100% !important;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+      }
+      .container .imgbox img{
+        left: initial;
+        max-width: 100%;
+        transform: rotate(0deg);
+      }
+      .details{
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="imgbox">
+      <img src="img/C3639F2D45F56BA2FA5D56F8B54ADC95.jpg" alt="">
+    </div>
+    <div class="details">
+      <div class="content">
+        <h2>111111111</h2>
+        <p>11111111111111111111</p>
+        <h3>$150.99</h3>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

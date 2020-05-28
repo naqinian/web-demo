@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  html,body{
+    margin: 0;
+    font-family: serif;
+    text-align: center;
+    height: 100%;
+  }
+  .wrap,.first,.second,.third{
+    width: 100%;
+    height: 100%;
+  }
+ 
+  .first,.second,.third{
+    position: absolute;
+  }
+  .second,.third{
+    opacity: 0;
+  }
+  .wrap{
+    position: relative;
+    z-index: 1;
+  }
+  .first{
+    background: linear-gradient(#3ff8ca,#60e08c);
+    z-index: 10;
+    animation: first 10s infinite;
+  }
+  .second{
+    background: linear-gradient(#19eaa6,#00a1f0);
+    z-index: 20;
+    animation: second 10s infinite;
+    animation-delay: 2s;
+  }
+  .third{
+    background: linear-gradient(#aab7f8,#ff75c6);
+    z-index: 30;
+    animation: third 10s infinite;
+    animation-delay: 8s;
+  }
+
+  .txt{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+  }
+
+  @keyframes first{
+    0%{opacity: 1;}
+    10%{opacity: .8;}
+    20%{opacity: .6;}
+    30%{opacity: .4;}
+    40%{opacity: .2;}
+    50%{opacity: .1;}
+    60%{opacity: .2;}
+    70%{opacity: .4;}
+    80%{opacity: .6;}
+    90%{opacity: .8;}
+    100%{opacity: 1;}
+  }
+  @keyframes second{
+    0%{opacity: 0;}
+    10%{opacity: .2;}
+    20%{opacity: .4;}
+    30%{opacity: .6;}
+    40%{opacity: .8;}
+    50%{opacity: 1;}
+    60%{opacity: .8;}
+    70%{opacity: .6;}
+    80%{opacity: .4;}
+    90%{opacity: .2;}
+    100%{opacity: 0;}
+  }
+  @keyframes third{
+    0%{opacity: 0;}
+    10%{opacity: .8;}
+    20%{opacity: .6;}
+    30%{opacity: .4;}
+    40%{opacity: .2;}
+    50%{opacity: 1;}
+    60%{opacity: .2;}
+    70%{opacity: .4;}
+    80%{opacity: .6;}
+    90%{opacity: .8;}
+    100%{opacity: 0;}
+  }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="txt">
+      <h1>1111111</h1>
+      <p>222222</p>
+    </div>
+  </div>
+</body>
+</html>

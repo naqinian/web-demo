@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <title>网页进度条</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style type="text/css">
+    #progressBox {
+
+      width: 300px;
+
+      height: 40px;
+
+      position: relative;
+
+      border: 1px solid #c8c8c8;
+
+      background: #fff;
+
+    }
+
+    #progressBar,
+    #progressText {
+
+      position: absolute;
+
+      left: 0;
+
+      top: 0;
+
+      width: 100%;
+
+      line-height: 40px;
+
+      font-size: 18px;
+
+      text-align: center;
+
+    }
+
+    /*clip属性适用于绝对定位*/
+
+    #progressBar {
+
+      z-index: 2;
+
+      background: #00a1f5;
+
+      /*第二个参数表示所切宽度*/
+
+      clip: rect(0px, 0px, 140px, 0px);
+
+      color: white;
+
+    }
+
+    #progressText {
+
+      z-index: 1;
+
+      color: black;
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="progressBox">
+
+    <div id="progressBar">0%</div>
+
+    <div id="progressText">0%</div>
+
+  </div>
+
+</body>
+
+//从网页上加载过来的jquery
+
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+  $(function () {
+
+    var iNow = 0;//写死数据，实际情况应该取得后台返回的ajax数据
+
+    var timer = setInterval(function () {
+
+      iNow += 2;
+
+      if (iNow > 100) {
+
+        clearInterval(timer);
+
+      }
+
+      else {
+
+        progressFn(iNow);
+
+      }
+
+    }, 30);
+
+  });
+
+  function progressFn(cent) {
+
+    var progressBox = $("#progressBox");
+
+    var progressBar = $("#progressBar");
+
+    var progresstext = $("#progressText");
+
+    var toalWidth = progressBox.width();
+
+    progressBar.text(cent + "%");
+
+    progresstext.text(cent + "%");
+
+    progressBar.css({ clip: 'rect(0px,' + cent / 100 * toalWidth + 'px,140px,0px)' });
+
+  }
+
+</script>
+
+</html>

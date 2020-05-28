@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body{
+      margin: 0;
+      padding: 0;
+      background-color: #487eb0;
+      height: 100%;
+      overflow: hidden;
+    }
+    .bubble{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2),inset 0 10px 30px 5px rgba(255,255,255,1);
+    }
+    .b1{
+      left: -5%;
+      top: 5%;
+      transform: scale(0.6);
+      animation: bubble 25s linear infinite,direction 2s ease-in-out infinite alternate;
+    }
+    .b2{
+      left: 5%;
+      top: 80%;
+      transform: scale(0.4);
+      animation: bubble 15s linear infinite,direction 4s ease-in-out infinite alternate;
+    }
+    .b3{
+      left: 10%;
+      top: 40%;
+      transform: scale(0.7);
+      animation: bubble 20s linear infinite,direction 3s ease-in-out infinite alternate;
+    }
+    .b4{
+      left: 20%;
+      top: 0%;
+      transform: scale(0.3);
+      animation: bubble 29s linear infinite,direction 4s ease-in-out infinite alternate;
+    }
+    .b5{
+      left: 30%;
+      top: 50%;
+      transform: scale(0.5);
+      animation: bubble 29s linear infinite,direction 2s ease-in-out infinite alternate;
+    }
+    .b6{
+      left: 50%;
+      top: 0%;
+      transform: scale(0.8);
+      animation: bubble 36s linear infinite,direction 3s ease-in-out infinite alternate;
+    }
+    .b7{
+      left: 65%;
+      top: 70%;
+      transform: scale(0.4);
+      animation: bubble 25s linear infinite,direction 2s ease-in-out infinite alternate;
+    }
+    .b8{
+      left: 80%;
+      top: 10%;
+      transform: scale(0.3);
+      animation: bubble 21s linear infinite,direction 4s ease-in-out infinite alternate;
+    }
+    .b9{
+      left: 90%;
+      top: 50%;
+      transform: scale(0.6);
+      animation: bubble 25s linear infinite,direction 2s ease-in-out infinite alternate;
+    }
+    .b10{
+      left: 80%;
+      top: 80%;
+      transform: scale(0.3);
+      animation: bubble 22s linear infinite,direction 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes bubble{
+      0%{margin-top: 100%}
+      100%{margin-top: -100%}
+    }
+    @keyframes direction{
+      0%{margin-left: 0}
+      100%{margin-left: 50px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+    <div class="bubble b5"></div>
+    <div class="bubble b6"></div>
+    <div class="bubble b7"></div>
+    <div class="bubble b8"></div>
+    <div class="bubble b9"></div>
+    <div class="bubble b10"></div>
+  </div>
+</body>
+</html>
